@@ -54,7 +54,7 @@ public abstract class PinMgmtActivationHandler <T extends Activity> extends Abst
     @Override
     protected boolean isActivateUrlAllowed(Uri eIDUrl) {
 	String path = eIDUrl.getPath();
-	boolean pathOk = (path == null) ? false : path.startsWith("/ShowUI");
+	boolean pathOk = (path == null) ? false : path.startsWith("/eID-Client");
 	boolean isEIDActivate = "PINManagement".equals(eIDUrl.getQueryParameter("ShowUI"));
 	return pathOk && isEIDActivate;
     }
